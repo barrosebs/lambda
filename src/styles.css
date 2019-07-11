@@ -1,1 +1,112 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    height: 100vh;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    background: #454547;
+    background: -moz-linear-gradient(60deg, #363636 0% #9f9fa1 100%);
+    background: -webkit-linear-gradient(60deg, #363636 0% #9f9fa1 100%);
+    background: linear-gradient(60deg, #363636 0% #9f9fa1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#363636');
+    
+}
+
+.head{
+    margin: 70px 240px 0px;
+    width: 800px;
+    padding: 10px;
+    background: #a8a8a8;
+    background: -moz-linear-gradient(60deg, #a8a8a8 0% #9f9fa1 100%);
+    background: -webkit-linear-gradient(60deg, #a8a8a8 0% #9f9fa1 100%);
+    background: linear-gradient(60deg, #a8a8a8 0% #a8a8a8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#363636')
+}
+.head-content h4{
+    color: #fff;
+}
+
+.head-content{
+   padding: 25px;
+}
+/*estilizando a ul*/
+ul{
+    color: black;
+    text-align: left;
+    margin: 5px;
+    padding: 10px;
+    list-style: none;
+    background: #363636;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 4px 14px 0px rgba(0,0,0,0.39);
+    -moz-box-shadow: 3px 4px 14px 0px rgba(0,0,0,0.39);
+    box-shadow: 3px 4px 14px 0px rgba(0,0,0,0.39);
+}
+/*estilizando a li*/
+li{
+    display:inline-block;
+    margin: 14px;
+    padding: 15px;
+    width: 260px;
+    right: 200px;
+    background: #fff;
+    font-size: 0.8em;
+    
+}
+
+/*modificando mouse do button*/
+ul>li>button{
+    cursor: pointer;
+}
+
+/*estilizando a button checkbox*/
+
+li>button{
+    border: none;
+    background-color: #fff;
+    font-size: 1em;
+    float: left;
+    opacity: 0.6;
+    transition: opacity 1s;
+}
+li>button{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+h4{
+    color: #303030;
+}
+p{
+    font-family: 'Sniglet', cursive;
+}
+
+.button{
+    position:absolute; 
+    top:40%;
+    left:80%;
+    background-color: #000;
+    border:none;
+    padding: 20px;
+    color: #fff;
+    font-size: 1em;
+}
+
+
+.check{
+    color: #1da002;
+}
+
+.unCheck{
+    color: #9f9fa1;
+    cursor: pointer;
+}
+.titulof{
+    font-size:1em bold;
+}
+.subtitulof{
+    font-size: 0.8em;
+}

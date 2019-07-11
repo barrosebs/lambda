@@ -1,10 +1,21 @@
-<h4>{{titulo}}</h4>
-<h1>{{subTitulo}}</h1>
-<p>{{descricao}}</p>
+<div class="head animated tada">
+    <h4>{{titulo}}</h4>
+    <h1>{{subTitulo}}</h1>
+    <p>{{descricao}}</p>
+</div>
+<div class="content">
+    <div class="head-content">
+        <h4>Selecionados 0 de 8 filmes</h4>
+        <button class="button">GERAR MEU CAMPENATO</button>
+    </div>
+    <div class="content-body">
+        <ul>
+          <li *ngFor="let f of filmes$ | async" id="list_filme">
+              <button *ngIf="f.selecao" (click)="markAsUnSelection(f)"><i class="fas fa-check-circle fa-2x check"></i></button>
+              <button *ngIf="!f.selecao" (click)="markAsSelection(f)" ><i class="far fa-check-circle fa-2x unCheck"></i> </button>
+              <span class="titulof">{{f.titulo}} </span><br> <span class="subtitulof">{{f.ano}}</span>
+          </li>
+        </ul>
+    </div>
+</div>
 
-<ul>
-  <li *ngFor="let f of filmes$ | async">{{f.titulo}} - {{f.ano}}
-    <button *ngIf="!filmes$.selecao" (click)="markAsSelection">true</button>
-    <button *ngIf="filmes$.selecao" (click)="markAsUnSelection">false</button>
-  </li>
-</ul>

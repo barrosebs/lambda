@@ -11,21 +11,32 @@ import { Filme } from 'src/models/filmes.model';
 })
 export class AppComponent implements OnInit {
  //variáveis de inicialização de tela
+ public titulo: String = 'CAMPEONATO DE FILMES';
+
  public subTitulo: String = 'Fase de Seleção';
  public descricao: String = 'Selecione 8 filmes que você deseja que entrem na competição e depois pressione o botão Gerar Meu Campeonato para prosseguir';
  public filmes$: Observable<Filme[]>;
+ public cont: Number = 1;
  //public form: FormGroup;
  //construtor para auxiliar
  constructor (private data: DataService) {
 
     };
+
  ngOnInit(){
    this.filmes$ = this.data.getFilmes();
- }
+ };
 
- save(){
-   const data = JSON.stringify(this.filmes$);
-   localStorage.setItem('fillmes', data);
+ markAsSelection(select: Filme){
+   select.selecao = true;
+   console.log(select);
+   let qtd = 1;
+ };
+
+ markAsUnSelection(select: Filme){
+  select.selecao = false;
+  console.log(select);
  }
-};
+ 
+}
 
